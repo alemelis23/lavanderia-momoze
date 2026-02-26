@@ -174,7 +174,12 @@ a{text-decoration:none;color:inherit;}
 .listino-table td{padding:.65rem .4rem;font-size:.875rem;color:var(--text-dark);}
 .listino-table td:first-child{font-weight:600;}
 .listino-table td:last-child{font-weight:800;color:var(--blue-700);text-align:right;white-space:nowrap;}
-.listino-table tr.urgent td:first-child::after{content:'*';color:var(--blue-400);margin-left:2px;}
+.listino-table tr.urgent td:first-child{color:var(--blue-700);}
+.listino-notes-box{display:flex;flex-direction:column;gap:.7rem;margin-top:1.2rem;}
+@media(min-width:600px){.listino-notes-box{flex-direction:row;gap:1.2rem;}}
+.listino-note-item{flex:1;display:flex;gap:.75rem;align-items:flex-start;font-size:.82rem;color:var(--text-soft);line-height:1.65;background:var(--blue-50);border:1px solid var(--border);border-radius:var(--r-sm);padding:.9rem 1.1rem;}
+.listino-note-item strong{color:var(--text-dark);}
+.note-ico{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
 .listino-table tr:hover td{background:var(--blue-50);}
 .listino-note{margin-top:1rem;display:flex;gap:.7rem;align-items:flex-start;font-size:.78rem;color:var(--text-soft);line-height:1.65;background:var(--blue-50);border:1px solid var(--border);border-radius:var(--r-sm);padding:.9rem 1.1rem;}
 .listino-wrap{display:grid;grid-template-columns:1fr;gap:0;}
@@ -487,12 +492,12 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
         <div class="dryer-ico">💨</div>
         <div>
           <h4>Asciugatrice Professionale 18 kg</h4>
-          <p>Ideale per piumini, coperte, lenzuola matrimoniali e capi voluminosi. Ciclo rapido e potente. Contattaci per disponibilità e tariffe.</p>
+          <p>Ideale per piumini, coperte, lenzuola matrimoniali e capi voluminosi. Ciclo rapido e potente.</p>
         </div>
-      </div>
-      <div class="listino-note reveal">
-        <span style="font-size:1.1rem;flex-shrink:0">💬</span>
-        <span>Per informazioni sui tempi e i costi dell'asciugatrice da 18 kg contattaci su WhatsApp al <strong><a href="https://wa.me/393467442378" style="color:var(--blue-600)"><span style="white-space:nowrap">346&nbsp;7442378</span></a></strong>.</span>
+        <div style="background:rgba(255,255,255,.2);border-radius:12px;padding:.9rem 1.4rem;text-align:center;flex-shrink:0;">
+          <div style="font-family:'Pacifico',cursive;font-size:2.2rem;color:white;line-height:1;">€ 2</div>
+          <div style="font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.2rem;">a ciclo</div>
+        </div>
       </div>
     </div>
 
@@ -503,29 +508,31 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
           <div class="listino-section">
             <div class="listino-section-title">Piumoni &amp; Trapunte</div>
             <table class="listino-table">
-              <tr class="urgent"><td>Trapunta matrimoniale sintetica</td><td>—</td></tr>
-              <tr class="urgent"><td>Trapunta singola sintetica</td><td>—</td></tr>
-              <tr><td>Trapunta matrimoniale in piuma</td><td>€ 15,00</td></tr>
-              <tr><td>Trapunta singola in piuma</td><td>€ 12,00</td></tr>
-              <tr><td>Trapunta matrimoniale in lana</td><td>€ 22,00</td></tr>
-              <tr><td>Trapunta singola in lana merino</td><td>€ 16,00</td></tr>
-              <tr><td>Coperta matrimoniale in lana merino</td><td>€ 12,00</td></tr>
-              <tr><td>Coprimaterasso imbottito matrimoniale</td><td>€ 25,00</td></tr>
-              <tr><td>Coprimaterasso imbottito singolo</td><td>€ 17,00</td></tr>
-              <tr class="urgent"><td>Giubbotto no piuma</td><td>€ 20,00</td></tr>
-              <tr class="urgent"><td>Piumino</td><td>€  8,00</td></tr>
+              <tr class="urgent"><td>Trapunta matrimoniale sintetica *</td><td>€ 15,00</td></tr>
+              <tr class="urgent"><td>Trapunta singola sintetica *</td><td>€ 12,00</td></tr>
+              <tr><td>Trapunta matrimoniale in piuma</td><td>€ 22,00</td></tr>
+              <tr><td>Trapunta singola in piuma</td><td>€ 16,00</td></tr>
+              <tr><td>Coperta matrimoniale in lana</td><td>€ 12,00</td></tr>
+              <tr><td>Trapunta matrimoniale in lana merino</td><td>€ 25,00</td></tr>
+              <tr><td>Trapunta singola in lana merino</td><td>€ 17,00</td></tr>
+              <tr><td>Coprimaterasso imbottito matrimoniale</td><td>€ 20,00</td></tr>
+              <tr><td>Coprimaterasso imbottito singolo</td><td>€ 15,00</td></tr>
+              <tr class="urgent"><td>Giubbotto no piuma *</td><td>€ 8,00</td></tr>
+              <tr class="urgent"><td>Piumino *</td><td>€ 10,00</td></tr>
             </table>
-          </div>
-          <div class="listino-note reveal">
-            <span style="font-size:1rem;flex-shrink:0">⚡</span>
-            <span>Le voci con * possono essere preparate con urgenza (in giornata) con un supplemento di <strong>€ 3,00</strong>.</span>
-          </div>
-          <div class="listino-note reveal" style="margin-top:.6rem;">
-            <span style="font-size:1rem;flex-shrink:0">🔍</span>
-            <span>La smacchiatura avrà un costo aggiuntivo e verrà trattata solo per macchie di cui si conosce l'entità.</span>
           </div>
         </div>
         <div></div>
+      </div>
+      <div class="listino-notes-box reveal">
+        <div class="listino-note-item">
+          <span class="note-ico">⚡</span>
+          <div><strong>Servizio urgente (voci con *)</strong><br>Le voci contrassegnate con * possono essere preparate in giornata, con un supplemento di <strong>€ 3,00</strong>.</div>
+        </div>
+        <div class="listino-note-item">
+          <span class="note-ico">🔍</span>
+          <div><strong>Smacchiatura</strong><br>La smacchiatura ha un costo aggiuntivo. Vengono trattate solo macchie di cui si conosce l'entità.</div>
+        </div>
       </div>
     </div>
 
@@ -534,7 +541,7 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
       <div class="listino-wrap">
         <div>
           <div class="listino-section">
-            <div class="listino-section-title">Prezzi Lava e Stira – Abbigliamento</div>
+            <div class="listino-section-title">Lava e Stira – Abbigliamento</div>
             <table class="listino-table">
               <tr><td>Pantalone con riga</td><td>€ 5,50</td></tr>
               <tr><td>Pantalone senza riga</td><td>€ 5,00</td></tr>
@@ -545,7 +552,7 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
               <tr><td>Felpa</td><td>€ 3,50</td></tr>
               <tr><td>Bermuda</td><td>€ 2,50</td></tr>
               <tr><td>Cappotto</td><td>€ 8,00</td></tr>
-              <tr><td>Cappotto lungo</td><td>€ 10,00 / 12,00</td></tr>
+              <tr><td>Cappotto lungo</td><td>€ 10,00 / € 12,00</td></tr>
               <tr><td>Gonna</td><td>€ 3,00</td></tr>
               <tr><td>Gonna lunga</td><td>€ 5,00</td></tr>
             </table>
@@ -553,9 +560,15 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
         </div>
         <div></div>
       </div>
-      <div class="listino-note reveal">
-        <span style="font-size:1rem;flex-shrink:0">🔍</span>
-        <span>La smacchiatura avrà un costo aggiuntivo e verrà trattata solo per macchie di cui si conosce l'entità.</span>
+      <div class="listino-notes-box reveal">
+        <div class="listino-note-item">
+          <span class="note-ico">⚡</span>
+          <div><strong>Servizio urgente (voci con *)</strong><br>Le voci contrassegnate con * possono essere preparate in giornata, con un supplemento di <strong>€ 3,00</strong>.</div>
+        </div>
+        <div class="listino-note-item">
+          <span class="note-ico">🔍</span>
+          <div><strong>Smacchiatura</strong><br>La smacchiatura ha un costo aggiuntivo. Vengono trattate solo macchie di cui si conosce l'entità.</div>
+        </div>
       </div>
     </div>
 
@@ -572,7 +585,7 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
               <tr><td>Salvietta bidet</td><td>€ 0,75</td></tr>
               <tr><td>Tappeto doccia</td><td>€ 1,00</td></tr>
               <tr><td>Accappatoio</td><td>€ 2,50</td></tr>
-              <tr><td>Tende al mt</td><td>€ 5,00</td></tr>
+              <tr><td>Tende al metro</td><td>€ 5,00</td></tr>
               <tr><td>Tovaglia piccola</td><td>€ 3,50</td></tr>
               <tr><td>Tovaglia media</td><td>€ 4,50</td></tr>
               <tr><td>Tovaglia grande</td><td>€ 6,50</td></tr>
@@ -583,9 +596,15 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
         </div>
         <div></div>
       </div>
-      <div class="listino-note reveal">
-        <span style="font-size:1rem;flex-shrink:0">🔍</span>
-        <span>La smacchiatura avrà un costo aggiuntivo e verrà trattata solo per macchie di cui si conosce l'entità.</span>
+      <div class="listino-notes-box reveal">
+        <div class="listino-note-item">
+          <span class="note-ico">⚡</span>
+          <div><strong>Servizio urgente (voci con *)</strong><br>Le voci contrassegnate con * possono essere preparate in giornata, con un supplemento di <strong>€ 3,00</strong>.</div>
+        </div>
+        <div class="listino-note-item">
+          <span class="note-ico">🔍</span>
+          <div><strong>Smacchiatura</strong><br>La smacchiatura ha un costo aggiuntivo. Vengono trattate solo macchie di cui si conosce l'entità.</div>
+        </div>
       </div>
     </div>
 
@@ -699,12 +718,12 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
           </div>
         </div>
         <div class="c-card reveal">
-          <div class="c-ico" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);">📸</div>
+          <div class="c-ico" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;">📸</div>
           <div>
             <div class="c-lbl">Instagram</div>
-            <div class="c-val">@lavanderia_momoze</div>
+            <div class="c-val" style="color:var(--text-dark);font-weight:700;">@lavanderia_momoze</div>
             <div class="social-row" style="margin-top:.6rem;">
-              <a href="https://www.instagram.com/lavanderia_momoze/?hl=it" target="_blank" rel="noopener" class="social-btn btn-ig">📸 Seguici su Instagram</a>
+              <a href="https://www.instagram.com/lavanderia_momoze/?hl=it" target="_blank" rel="noopener" class="social-btn btn-ig" style="background:linear-gradient(135deg,#833ab4,#c13584,#e1306c,#fd1d1d,#f56040,#fcb045);color:#fff;font-weight:800;border:none;">📸 Seguici su Instagram</a>
             </div>
           </div>
         </div>
