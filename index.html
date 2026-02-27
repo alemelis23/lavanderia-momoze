@@ -191,6 +191,23 @@ a{text-decoration:none;color:inherit;}
 .dryer-card h4{color:white;font-size:1rem;font-weight:900;margin-bottom:.25rem;}
 .dryer-card p{color:rgba(255,255,255,.75);font-size:.82rem;line-height:1.6;}
 
+/* B2B */
+.b2b{padding:4.5rem 0;background:linear-gradient(160deg,#f0f8ff 0%,#e8f4fd 100%);}
+.b2b-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-bottom:2rem;}
+@media(min-width:560px){.b2b-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.b2b-grid{grid-template-columns:repeat(4,1fr);}}
+.b2b-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:1.8rem 1.5rem;box-shadow:var(--s-sm);transition:transform .2s,box-shadow .2s;}
+.b2b-card:hover{transform:translateY(-4px);box-shadow:var(--s-md);}
+.b2b-ico{font-size:2.2rem;margin-bottom:1rem;}
+.b2b-card h3{font-size:.95rem;font-weight:800;color:var(--blue-800);margin-bottom:.5rem;}
+.b2b-card p{font-size:.84rem;color:var(--text-soft);line-height:1.7;}
+.b2b-cta{background:linear-gradient(135deg,var(--blue-800),var(--blue-600));border-radius:var(--r-xl);padding:2.4rem 2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.6rem;box-shadow:var(--s-lg);}
+@media(min-width:700px){.b2b-cta{flex-direction:row;text-align:left;padding:2.4rem 3rem;justify-content:space-between;}}
+.b2b-cta-text h3{font-size:1.15rem;font-weight:900;color:white;margin-bottom:.4rem;}
+.b2b-cta-text p{font-size:.85rem;color:rgba(255,255,255,.68);line-height:1.65;max-width:480px;}
+.b2b-btn{flex-shrink:0;background:#25d366;color:white;font-weight:800;font-size:.88rem;padding:1rem 2rem;border-radius:var(--r-sm);white-space:nowrap;box-shadow:0 6px 20px rgba(0,0,0,.2);transition:transform .15s,box-shadow .15s;}
+.b2b-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25);}
+
 /* RECENSIONI */
 .recensioni{padding:4.5rem 0;background:var(--off-white);}
 .rating-bar{background:linear-gradient(135deg,var(--blue-700),var(--blue-500));border-radius:var(--r-xl);padding:2.2rem 1.8rem;display:flex;flex-direction:column;gap:1.4rem;margin-bottom:1.8rem;position:relative;overflow:hidden;box-shadow:var(--s-lg);}
@@ -311,6 +328,7 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
     <li><a href="#listino">Listino</a></li>
     <li><a href="#recensioni">Recensioni</a></li>
     <li><a href="#brands">Brands</a></li>
+    <li><a href="#strutture">Strutture</a></li>
     <li><a href="#dove">Contatti</a></li>
   </ul>
   <a href="https://wa.me/393467442378" target="_blank" class="nav-pill"><span class="nav-dot"></span> WhatsApp</a>
@@ -692,6 +710,50 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
   </div>
 </section>
 
+<!-- B2B STRUTTURE RICETTIVE -->
+<section class="b2b" id="strutture">
+  <div class="container">
+    <div class="tag">🏨 Strutture Ricettive</div>
+    <h2 class="sh">Collaboriamo con <span>Hotel &amp; B&amp;B</span></h2>
+    <p class="sp">Un servizio su misura per le strutture ricettive del territorio. Lenzuola, asciugamani, tovaglie e molto altro: pensiamo noi a tutto.</p>
+
+    <div class="b2b-grid">
+      <div class="b2b-card reveal">
+        <div class="b2b-ico">🚐</div>
+        <h3>Ritiro &amp; Consegna a Domicilio</h3>
+        <p>Vieni tu da noi o veniamo noi da te. Per le strutture ricettive offriamo il servizio di ritiro e riconsegna della biancheria direttamente in struttura, così non devi interrompere la tua operatività.</p>
+      </div>
+      <div class="b2b-card reveal">
+        <div class="b2b-ico">🛏️</div>
+        <h3>Biancheria da Camera</h3>
+        <p>Lenzuola, federe, copripiumini, asciugamani e accappatoi lavati, asciugati e piegati con cura. Consegnati freschi, profumati e pronti all'uso.</p>
+      </div>
+      <div class="b2b-card reveal">
+        <div class="b2b-ico">🍽️</div>
+        <h3>Biancheria da Tavola</h3>
+        <p>Tovaglie, tovaglioli e strofinacci per ristoranti, agriturismi e strutture con ristorazione. Sempre impeccabili, sempre puntuali.</p>
+      </div>
+      <div class="b2b-card reveal">
+        <div class="b2b-ico">📋</div>
+        <h3>Preventivi Personalizzati</h3>
+        <p>Ogni struttura ha esigenze diverse. Contattaci su WhatsApp per ricevere un preventivo su misura in base ai tuoi volumi e alle tue necessità.</p>
+      </div>
+    </div>
+
+    <div class="b2b-cta reveal">
+      <div class="b2b-cta-text">
+        <div style="font-size:1.6rem;margin-bottom:.5rem;">🏨</div>
+        <h3>Sei titolare di una struttura ricettiva?</h3>
+        <p>Hotel, B&amp;B, agriturismo, casa vacanze: scrivici su WhatsApp per organizzare il servizio e ricevere un preventivo personalizzato.</p>
+      </div>
+      <a href="https://wa.me/393467442378?text=Salve%2C%20sono%20titolare%20di%20una%20struttura%20ricettiva%20e%20vorrei%20informazioni%20sul%20servizio%20ritiro%20e%20consegna." target="_blank" class="b2b-btn">
+        💬 Richiedi Preventivo su WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
 <!-- DOVE -->
 <section class="dove" id="dove">
   <div class="container">
@@ -789,6 +851,7 @@ footer{background:var(--blue-900);color:rgba(255,255,255,.45);padding:2.4rem 1.2
       <li><a href="#listino">Listino</a></li>
       <li><a href="#recensioni">Recensioni</a></li>
       <li><a href="#brands">Brand</a></li>
+      <li><a href="#strutture">Strutture</a></li>
       <li><a href="#dove">Contatti</a></li>
     </ul>
     <div class="foot-copy">© 2026 Lavanderia Momoze.<br>Tutti i diritti riservati.<br><a href="https://www.instagram.com/lavanderia_momoze/?hl=it" style="color:rgba(255,255,255,.35);font-size:.7rem;">Instagram @lavanderia_momoze</a><br><span style="color:rgba(255,255,255,.22);font-size:.65rem;">Sito ideato e sviluppato da AM23</span></div>
